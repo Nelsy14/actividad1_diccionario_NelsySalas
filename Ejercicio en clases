@@ -1,0 +1,40 @@
+#elaboarar un programa que capture la siguente nformacion de un estudiante: codigo, nombres, apellido,contacto, coreo, edad, estrato,  genero y direccion.
+#solo se registran los estudiantes que cumplan el siguiente criterio. 1. sexo masculino. edad entre 15 - 25 y . estrato social debe estar entre 1 - 2.... 2Sexo fenmenino entre 20 - 35 años y estrato socieconomico  entre 1 - 4, en caso de que no aplique guaradr el contacto en una lista llamada pendiente. 
+
+
+Estudiantes = {}
+Pendiente = []
+import os
+sw = True
+
+def fnt_agregar(Codigo, Nombres, Apellidos, Edad, Contacto, Correo, Genero, Dirección, Estrato):
+    if Codigo == '' or Nombres == '' or Apellidos == '' or Edad == '' or Contacto == '' or Correo == ''  or Genero == '' or Dirección == '':
+        enter = input('Debe ingresar los datos <ENTER>')
+    else:
+            auxE = int(Edad) #convierte el dato en entero.
+            auxS = int(Estrato)  #convierte el dato en entero.
+            if (Genero == 'M' ) and (Edad >=15 and Edad <= 25) and (Estrato >=1 and Edad <=2 ):
+                 Estudiantes[Codigo] = {Nombres, Apellidos , Edad, Contacto, Correo, Genero, Dirección}
+                 enter = input(f'Estudiante {Nombres}, {Codigo} ha sido registrado con éxito <ENTER>'
+    
+def fnt_selector(op):
+    if op == '1':
+        os.system('cls') 
+        Codigo = input('Codigo:  ')
+        Nombres = input('Nombres:  ')
+        Edad = input('Edad:  ')
+        Contacto = input('Contacto:  ')
+        Correo = input('Correo: ')
+        Genero = input('Genero: M o F')
+        Dirección = input('Direccion:  ')
+        fnt_agregar (Estudiantes, Codigo , Nombres, Edad, Contacto, Correo, Genero, Dirección)
+    elif op == '2'
+    elif op == '3':
+    
+
+while sw == True:
+    os.system('cls')
+    opcion = input('1. Registrar\n2. Mostrar\n3. Salir\n- >  ')
+    
+    fnt_selector(opcion)
+            
